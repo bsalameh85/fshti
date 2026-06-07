@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>معهد علوم المستقبل العالي للتدريب</title>
 
@@ -29,17 +29,10 @@ padding:10px;
 .container{
 width:100%;
 max-width:650px;
-background:#ffffff;
+background:#fff;
 border-radius:18px;
 padding:20px 15px;
 box-shadow:0 20px 50px rgba(0,0,0,.15);
-animation:fadeIn .6s ease;
-margin:10px 0;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
 }
 
 .institute-header{
@@ -51,25 +44,20 @@ border-bottom:2px solid #e5e7eb;
 
 .institute-header h2{
 font-size:22px;
-font-weight:700;
 color:#2563eb;
 margin-bottom:5px;
-line-height:1.5;
 }
 
 .institute-header p{
-color:#64748b;
 font-size:14px;
-font-weight:600;
+color:#64748b;
 }
 
 .title{
 text-align:center;
 font-size:22px;
-font-weight:700;
-color:#0f172a;
 margin-bottom:20px;
-line-height:1.5;
+color:#0f172a;
 }
 
 .notice{
@@ -77,9 +65,9 @@ background:#f8fafc;
 border-right:6px solid #2563eb;
 padding:15px;
 border-radius:12px;
+font-size:14px;
 line-height:2;
 margin-bottom:20px;
-font-size:14px;
 color:#334155;
 }
 
@@ -103,7 +91,6 @@ padding:15px;
 border:1px solid #d1d5db;
 border-radius:12px;
 font-size:16px;
-transition:.3s;
 min-height:52px;
 }
 
@@ -119,14 +106,7 @@ padding:16px;
 border-radius:12px;
 margin-bottom:12px;
 cursor:pointer;
-transition:.3s;
 font-size:15px;
-line-height:1.8;
-}
-
-.option:hover{
-background:#eff6ff;
-border-color:#2563eb;
 }
 
 .option input{
@@ -146,13 +126,12 @@ button{
 width:100%;
 height:56px;
 background:#2563eb;
-color:white;
+color:#fff;
 border:none;
 border-radius:12px;
 font-size:18px;
 font-weight:700;
 cursor:pointer;
-transition:.3s;
 }
 
 button:hover{
@@ -162,40 +141,27 @@ background:#1d4ed8;
 .loading{
 display:none;
 text-align:center;
-margin-top:12px;
+margin-top:10px;
 color:#2563eb;
 font-weight:700;
-font-size:15px;
 }
 
 .success{
 display:none;
+text-align:center;
 margin-top:15px;
-padding:15px;
+padding:12px;
 background:#dcfce7;
 color:#166534;
 border-radius:12px;
 font-weight:bold;
-text-align:center;
-font-size:15px;
 }
 
 .footer{
 text-align:center;
 margin-top:15px;
-color:#64748b;
 font-size:12px;
-}
-
-/* تحسين إضافي للموبايل */
-@media screen and (max-width:480px){
-
-.institute-header h2{font-size:20px;}
-.title{font-size:20px;}
-.notice{font-size:13px;}
-.option{font-size:14px;}
-button{font-size:17px;}
-
+color:#64748b;
 }
 
 </style>
@@ -213,20 +179,11 @@ button{font-size:17px;}
 <h1 class="title">تعديل بيانات الدورة</h1>
 
 <div class="notice">
-
 السلام عليكم ورحمة الله وبركاته<br><br>
-
-بخصوص تعديل الشهادة من حضوري إلى عن بعد نود إبلاغكم بأننا ما زلنا نتابع حل المشكلة التي حدثت بسبب التحديثات ولغاية الآن لم يتم تزويدنا بالحل من الجهات التي تم التواصل معها.<br><br>
-
-ولأننا حريصون على تسريع حل المشكلة سيكون هناك خيارات جديدة حسب التالي:<br><br>
-
-1- تاريخ يحدده المشارك.<br>
-2- بداية 2026/06/08 لمن حدد 2026/04/27 سابقاً.<br>
-3- 2026/06/04 للمسجلين الذين لم يحددوا.<br>
-
+يرجى اختيار أحد الخيارات التالية لإعادة جدولة الدورة.
 </div>
 
-<form id="registrationForm">
+<form id="form">
 
 <div class="form-group">
 <label>الاسم الرباعي</label>
@@ -235,12 +192,12 @@ button{font-size:17px;}
 
 <div class="form-group">
 <label>رقم الهوية</label>
-<input type="tel" id="nationalId" inputmode="numeric" pattern="[0-9]+" required>
+<input type="tel" id="nationalId" inputmode="numeric" required>
 </div>
 
 <div class="form-group">
 
-<label>اختر الخيار المناسب</label>
+<label>اختر الخيار</label>
 
 <div class="option">
 <input type="radio" name="option" value="تاريخ يحدده المشارك" required>
@@ -253,13 +210,13 @@ button{font-size:17px;}
 </div>
 
 <div class="option">
-<input type="radio" name="option" value="دورة تبدأ بتاريخ 2026/06/08">
-دورة تبدأ بتاريخ 2026/06/08
+<input type="radio" name="option" value="2026/06/08">
+2026/06/08
 </div>
 
 <div class="option">
-<input type="radio" name="option" value="دورة تبدأ بتاريخ 2026/06/04">
-دورة تبدأ بتاريخ 2026/06/04
+<input type="radio" name="option" value="2026/06/04">
+2026/06/04
 </div>
 
 </div>
@@ -267,11 +224,11 @@ button{font-size:17px;}
 <button type="submit">إرسال الطلب</button>
 
 <div class="loading" id="loading">جاري الإرسال...</div>
-<div class="success" id="successMessage">تم إرسال الطلب بنجاح</div>
+<div class="success" id="success">تم الإرسال بنجاح</div>
 
 </form>
 
-<div class="footer">معهد علوم المستقبل العالي للتدريب</div>
+<div class="footer">جميع الحقوق محفوظة</div>
 
 </div>
 
@@ -281,52 +238,57 @@ const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyjIfYfucjw1m92u8nP
 
 document.querySelectorAll('input[name="option"]').forEach(radio=>{
 radio.addEventListener("change",function(){
-const box=document.getElementById("customDateBox");
-const date=document.getElementById("customDate");
 
-if(this.value==="تاريخ يحدده المشارك"){
-box.style.display="block";
-date.required=true;
+const box = document.getElementById("customDateBox");
+const date = document.getElementById("customDate");
+
+if(this.value === "تاريخ يحدده المشارك"){
+box.style.display = "block";
+date.required = true;
 }else{
-box.style.display="none";
-date.required=false;
-date.value="";
+box.style.display = "none";
+date.required = false;
+date.value = "";
 }
+
 });
 });
 
-document.getElementById("registrationForm").addEventListener("submit",async function(e){
+document.getElementById("form").addEventListener("submit", async function(e){
 e.preventDefault();
 
-const selected=document.querySelector('input[name="option"]:checked').value;
+const selected = document.querySelector('input[name="option"]:checked').value;
 
-const data={
-name:document.getElementById("name").value,
-nationalId:document.getElementById("nationalId").value,
-option:selected,
-customDate:selected==="تاريخ يحدده المشارك"
-?document.getElementById("customDate").value
-:""
+const data = {
+name: document.getElementById("name").value,
+nationalId: document.getElementById("nationalId").value,
+option: selected,
+customDate: selected === "تاريخ يحدده المشارك"
+? document.getElementById("customDate").value
+: ""
 };
 
-document.getElementById("loading").style.display="block";
+document.getElementById("loading").style.display = "block";
 
-try{
-await fetch(WEB_APP_URL,{
-method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify(data)
+try {
+
+await fetch(WEB_APP_URL, {
+method: "POST",
+mode: "no-cors",
+body: JSON.stringify(data)
 });
 
-document.getElementById("loading").style.display="none";
-document.getElementById("successMessage").style.display="block";
-document.getElementById("registrationForm").reset();
-document.getElementById("customDateBox").style.display="none";
+document.getElementById("loading").style.display = "none";
+document.getElementById("success").style.display = "block";
 
-}catch(err){
-document.getElementById("loading").style.display="none";
+document.getElementById("form").reset();
+document.getElementById("customDateBox").style.display = "none";
+
+} catch (err) {
+
+document.getElementById("loading").style.display = "none";
 alert("حدث خطأ أثناء الإرسال");
-console.error(err);
+
 }
 
 });
