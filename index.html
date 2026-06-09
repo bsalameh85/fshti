@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>معهد علوم المستقبل العالي للتدريب</title>
+<title>نموذج اختيار موعد الدورة البديلة</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -31,67 +31,68 @@ width:100%;
 max-width:650px;
 background:#fff;
 border-radius:18px;
-padding:20px 15px;
+padding:15px 15px; /* تم تقليل الحشو العلوي والسفلي */
 box-shadow:0 20px 50px rgba(0,0,0,.15);
 }
 
 .institute-header{
 text-align:center;
-margin-bottom:20px;
-padding-bottom:15px;
+margin-bottom:12px; /* تم تقليله من 20 */
+padding-bottom:10px; /* تم تقليله من 15 */
 border-bottom:2px solid #e5e7eb;
 }
 
-.institute-header h2{
-font-size:22px;
-color:#2563eb;
-margin-bottom:5px;
+.logo {
+max-width: 110px; /* تم تصغير الشعار قليلاً لتوفير مساحة عمودية */
+height: auto;
+margin-bottom: 8px;
 }
 
 .institute-header p{
-font-size:14px;
-color:#64748b;
+font-size:15px;
+font-weight: 700;
+color:#2563eb;
 }
 
 .title{
 text-align:center;
-font-size:22px;
-margin-bottom:20px;
+font-size:18px; /* تم تصغير الخط قليلاً */
+margin-bottom:12px; /* تم تقليله من 20 */
 color:#0f172a;
 }
 
 .notice{
 background:#f8fafc;
 border-right:6px solid #2563eb;
-padding:15px;
+padding:10px 12px; /* تم تقليل الحشو الداخلي */
 border-radius:12px;
-font-size:14px;
-line-height:2;
-margin-bottom:20px;
+font-size:13px;
+line-height:1.6; /* تم تقليل تباعد الأسطر لتوفير مساحة */
+margin-bottom:12px; /* تم تقليله من 20 */
 color:#334155;
 }
 
 .form-group{
-margin-bottom:18px;
+margin-bottom:10px; /* تم تقليل المسافة بين الحقول من 18 إلى 10 */
 }
 
 label{
 display:block;
-margin-bottom:8px;
+margin-bottom:5px; /* تم تقليله من 8 */
 font-weight:600;
 color:#1e293b;
-font-size:15px;
+font-size:14px;
 }
 
 input[type=text],
 input[type=date],
 input[type=tel]{
 width:100%;
-padding:15px;
+padding:10px 12px; /* تم تقليله من 15 */
 border:1px solid #d1d5db;
-border-radius:12px;
-font-size:16px;
-min-height:52px;
+border-radius:10px;
+font-size:15px;
+min-height:42px; /* تم تقليله من 52 لتوفير مساحة عمودية */
 }
 
 input:focus{
@@ -100,38 +101,43 @@ border-color:#2563eb;
 box-shadow:0 0 12px rgba(37,99,235,.2);
 }
 
+/* تعديل خيارات الراديو لتصبح متراصة وقريبة من بعضها */
 .option{
-border:2px solid #e5e7eb;
-padding:16px;
-border-radius:12px;
-margin-bottom:12px;
+border:1px solid #e5e7eb;
+padding:10px 12px; /* تم تقليل الحشو الداخلي من 16 */
+border-radius:10px;
+margin-bottom:6px; /* تم تقليل المسافة بين الخيارات من 12 إلى 6 */
 cursor:pointer;
-font-size:15px;
+font-size:14px;
+display: flex;
+align-items: center;
 }
 
 .option input{
-transform:scale(1.3);
-margin-left:10px;
+transform:scale(1.1); /* تم تصغير حجم الدائرة قليلاً لتتناسب مع الحجم الجديد */
+margin-left:8px;
 }
 
 #customDateBox{
 display:none;
-margin-top:10px;
-padding:15px;
+margin-top:5px;
+margin-bottom:8px;
+padding:10px;
 background:#f8fafc;
-border-radius:12px;
+border-radius:10px;
 }
 
 button{
 width:100%;
-height:56px;
+height:46px; /* تم تقليله من 56 لتوفير مساحة */
 background:#2563eb;
 color:#fff;
 border:none;
-border-radius:12px;
-font-size:18px;
+border-radius:10px;
+font-size:16px;
 font-weight:700;
 cursor:pointer;
+margin-top:5px;
 }
 
 button:hover{
@@ -141,7 +147,7 @@ background:#1d4ed8;
 .loading{
 display:none;
 text-align:center;
-margin-top:10px;
+margin-top:8px;
 color:#2563eb;
 font-weight:700;
 }
@@ -149,18 +155,18 @@ font-weight:700;
 .success{
 display:none;
 text-align:center;
-margin-top:15px;
-padding:12px;
+margin-top:10px;
+padding:10px;
 background:#dcfce7;
 color:#166534;
-border-radius:12px;
+border-radius:10px;
 font-weight:bold;
 }
 
 .footer{
 text-align:center;
-margin-top:15px;
-font-size:12px;
+margin-top:10px;
+font-size:11px;
 color:#64748b;
 }
 
@@ -172,15 +178,14 @@ color:#64748b;
 <div class="container">
 
 <div class="institute-header">
-<h2>معهد علوم المستقبل العالي للتدريب</h2>
+<img src="sh.png" alt="شعار المعهد" class="logo">
 <p>نموذج اختيار موعد الدورة البديلة</p>
 </div>
 
 <h1 class="title">تعديل بيانات الدورة</h1>
 
 <div class="notice">
-السلام عليكم ورحمة الله وبركاته<br><br>
-يرجى تعبئة البيانات واختيار الموعد المناسب لإعادة جدولة الدورة.
+السلام عليكم ورحمة الله وبركاته. يرجى تعبئة البيانات واختيار الموعد المناسب لإعادة جدولة الدورة.
 </div>
 
 <form id="form">
@@ -228,7 +233,7 @@ color:#64748b;
 
 </form>
 
-<div class="footer">معهد علوم المستقبل العالي للتدريب</div>
+<div class="footer">جميع الحقوق محفوظة © 2026</div>
 
 </div>
 
